@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback | Claws by Lesh</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAVIGATION -->
+    <nav>
+        <div class="nav-container">
+            <div class="nav-logo">Claws by <span>Lesh</span></div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="booking.html">Booking</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="feedback.html" class="active">Feedback</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- PAGE HERO -->
+    <div class="page-hero">
+        <h1>Client Feedback</h1>
+        <div class="divider"><div class="divider-dot"></div></div>
+        <p class="script">Your experience matters to us</p>
+    </div>
+
+    <!-- FEEDBACK FORM -->
+    <section class="feedback-section">
+        <div class="container">
+
+            <p class="feedback-intro">
+                We genuinely value your thoughts. Whether it was your first visit or your fifth, 
+                please take a moment to share your experience — it helps us grow and keep serving you better.
+            </p>
+
+            <div class="feedback-form-wrap">
+                <h2 class="section-title" style="text-align:left; font-size: 1.8rem; margin-bottom: 0.3rem;">Leave a Review</h2>
+                <p class="section-subtitle" style="text-align:left; margin-bottom: 2rem;">Tell us about your experience at Claws by Lesh</p>
+
+                <div class="form-group">
+                    <label for="fb-name">Your Name</label>
+                    <input type="text" id="fb-name" placeholder="Your name">
+                </div>
+
+                <div class="form-group">
+                    <label for="fb-service">Service Received</label>
+                    <select id="fb-service">
+                        <option value="" disabled selected>Which service did you receive?</option>
+                        <option value="gel-overlay">Gel Overlay</option>
+                        <option value="gel-tips">Gel Tips</option>
+                        <option value="gel-toes">Gel on Toes</option>
+                        <option value="gel-tiptoes">Gel on Tiptoes</option>
+                        <option value="buff-shine">Buff and Shine</option>
+                        <option value="combo">Combo</option>
+                        <option value="nail-art">Nail Art</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <span class="rating-label">Overall Rating</span>
+                    <div class="star-rating" id="star-rating">
+                        <button class="star" data-value="1" onclick="setRating(1)">1</button>
+                        <button class="star" data-value="2" onclick="setRating(2)">2</button>
+                        <button class="star" data-value="3" onclick="setRating(3)">3</button>
+                        <button class="star" data-value="4" onclick="setRating(4)">4</button>
+                        <button class="star" data-value="5" onclick="setRating(5)">5</button>
+                    </div>
+                    <p style="font-size: 0.8rem; color: var(--taupe); margin-top: 0.4rem;" id="rating-text">Click a number to rate (5 = excellent)</p>
+                </div>
+
+                <div class="form-group">
+                    <label for="fb-review">Your Review</label>
+                    <textarea id="fb-review" placeholder="Share your experience — what did you love, what could be improved?"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="fb-recommend">Would you recommend us?</label>
+                    <select id="fb-recommend">
+                        <option value="" disabled selected>Select an option</option>
+                        <option value="yes">Yes, definitely</option>
+                        <option value="maybe">Maybe</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>
+
+                <button class="btn btn-primary" onclick="submitFeedback()" style="width: 100%;">
+                    Submit Feedback
+                </button>
+
+                <div class="success-msg" id="feedback-success">
+                    Thank you for your feedback! We really appreciate you taking the time to share your experience.
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CLIENT REVIEWS -->
+    <section class="reviews-section">
+        <div class="container">
+            <h2 class="section-title">What Clients Say</h2>
+            <p class="section-subtitle">A few words from our happy clients</p>
+            <div class="reviews-grid">
+
+                <div class="review-card">
+                    <p class="review-stars">5 / 5</p>
+                    <p>"My nails have never looked this good! The marble effect was absolutely stunning. Will definitely be back."</p>
+                    <span class="review-author">Keabetswe M.</span>
+                </div>
+
+                <div class="review-card">
+                    <p class="review-stars">5 / 5</p>
+                    <p>"So professional and patient. I had a very specific design in mind and Lesh nailed it perfectly."</p>
+                    <span class="review-author">Thato R.</span>
+                </div>
+
+                <div class="review-card">
+                    <p class="review-stars">5 / 5</p>
+                    <p>"The prices are unbeatable for the quality. My gel tips lasted so long and looked fresh every day."</p>
+                    <span class="review-author">Naledi S.</span>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-logo">Claws by <span>Lesh</span></div>
+        <p>Tsholofelo West Flats &nbsp;|&nbsp; Gaborone</p>
+        <nav class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="booking.html">Booking</a>
+            <a href="contact.html">Contact</a>
+            <a href="feedback.html">Feedback</a>
+        </nav>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Claws by Lesh. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        var currentRating = 0;
+        var ratingLabels = ['', 'Poor', 'Fair', 'Good', 'Very Good', 'Excellent'];
+
+        function setRating(value) {
+            currentRating = value;
+            var stars = document.querySelectorAll('.star');
+            stars.forEach(function(star) {
+                if (parseInt(star.getAttribute('data-value')) <= value) {
+                    star.classList.add('active');
+                } else {
+                    star.classList.remove('active');
+                }
+            });
+            document.getElementById('rating-text').textContent = value + ' — ' + ratingLabels[value];
+        }
+
+        function submitFeedback() {
+            var name = document.getElementById('fb-name').value;
+            var review = document.getElementById('fb-review').value;
+
+            if (!name || !review || currentRating === 0) {
+                alert('Please fill in your name, a rating, and your review before submitting.');
+                return;
+            }
+
+            document.getElementById('feedback-success').style.display = 'block';
+            document.getElementById('fb-name').value = '';
+            document.getElementById('fb-service').value = '';
+            document.getElementById('fb-review').value = '';
+            document.getElementById('fb-recommend').value = '';
+            setRating(0);
+            currentRating = 0;
+            document.querySelectorAll('.star').forEach(function(s){ s.classList.remove('active'); });
+            document.getElementById('rating-text').textContent = 'Click a number to rate (5 = excellent)';
+        }
+    </script>
+
+</body>
+</html>

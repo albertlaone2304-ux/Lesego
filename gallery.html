@@ -1,135 +1,281 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery | Claws by Lesh</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery | Glam Studio</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-    <!-- NAVIGATION -->
-    <nav>
-        <div class="nav-container">
-            <div class="nav-logo">Claws by <span>Lesh</span></div>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="gallery.html" class="active">Gallery</a></li>
-                <li><a href="booking.html">Booking</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="feedback.html">Feedback</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <!-- PAGE HERO -->
-    <div class="page-hero">
-        <h1>Gallery</h1>
-        <div class="divider"><div class="divider-dot"></div></div>
-        <p class="script">Our work speaks for itself</p>
+  <header>
+    <div class="nav-inner">
+      <a href="index.html" class="logo">Glam <span>Studio</span></a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="gallery.html" class="active">Gallery</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contacts.html">Contact</a></li>
+          <li><a href="feedback.html">Feedback</a></li>
+          <li><a href="book.html" class="nav-book">Book Now</a></li>
+        </ul>
+      </nav>
     </div>
+  </header>
 
-    <!-- GALLERY -->
-    <section class="gallery-section">
-        <div class="container">
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="index.html">Home</a> / Gallery</div>
+      <h1>Our Work</h1>
+      <p>Browse our portfolio of nails, makeup, frontals and lash sets.</p>
+    </div>
+  </section>
 
-            <h2 class="section-title">Photos</h2>
-            <p class="section-subtitle">A selection of our nail work</p>
+  <section class="section">
+    <div class="container">
 
-            <div class="gallery-grid">
+      <!-- TABS -->
+      <div class="gallery-tabs">
+        <button class="tab-btn active" onclick="showCategory('nails', this)">Nail Services</button>
+        <button class="tab-btn" onclick="showCategory('makeup', this)">Makeup</button>
+        <button class="tab-btn" onclick="showCategory('frontals', this)">Frontals</button>
+        <button class="tab-btn" onclick="showCategory('lashes', this)">Lashes</button>
+      </div>
 
-                <!-- Photo 1 -->
-                <div class="gallery-item">
-                    <img src="photos/photo1.jpg" alt="Nail work 1"
-                         onerror="this.outerHTML='<div class=\'gallery-item\'><div class=\'gallery-placeholder\'><div class=\'upload-hint\'>+</div><p>photo1.jpg</p></div></div>'">
-                </div>
-
-                <!-- Photo 2 -->
-                <div class="gallery-item">
-                    <img src="photos/photo2.jpg" alt="Nail work 2"
-                         onerror="this.outerHTML='<div class=\'gallery-item\'><div class=\'gallery-placeholder\'><div class=\'upload-hint\'>+</div><p>photo2.jpg</p></div></div>'">
-                </div>
-
-                <!-- Photo 3 -->
-                <div class="gallery-item">
-                    <img src="photos/photo3.jpg" alt="Nail work 3"
-                         onerror="this.outerHTML='<div class=\'gallery-item\'><div class=\'gallery-placeholder\'><div class=\'upload-hint\'>+</div><p>photo3.jpg</p></div></div>'">
-                </div>
-
-                <!-- Photo 4 -->
-                <div class="gallery-item">
-                    <img src="photos/photo4.jpg" alt="Nail work 4"
-                         onerror="this.outerHTML='<div class=\'gallery-item\'><div class=\'gallery-placeholder\'><div class=\'upload-hint\'>+</div><p>photo4.jpg</p></div></div>'">
-                </div>
-
-                <!-- Photo 5 -->
-                <div class="gallery-item">
-                    <img src="photos/photo5.jpg" alt="Nail work 5"
-                         onerror="this.outerHTML='<div class=\'gallery-item\'><div class=\'gallery-placeholder\'><div class=\'upload-hint\'>+</div><p>photo5.jpg</p></div></div>'">
-                </div>
-
-                <!-- Photo 6 -->
-                <div class="gallery-item">
-                    <img src="photos/photo6.jpg" alt="Nail work 6"
-                         onerror="this.outerHTML='<div class=\'gallery-item\'><div class=\'gallery-placeholder\'><div class=\'upload-hint\'>+</div><p>photo6.jpg</p></div></div>'">
-                </div>
-
-            </div>
-
-            <!-- VIDEOS -->
-            <h2 class="videos-title">Videos</h2>
-            <p class="videos-subtitle">Watch our nail art process</p>
-
-            <div class="videos-grid">
-
-                <!-- Video 1 -->
-                <div class="video-item">
-                    <video controls poster="photos/photo1.jpg">
-                        <source src="videos/video1.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
-
-                <!-- Video 2 -->
-                <div class="video-item">
-                    <video controls poster="photos/photo2.jpg">
-                        <source src="videos/video2.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
-
-                <!-- Video 3 -->
-                <div class="video-item">
-                    <video controls poster="photos/photo3.jpg">
-                        <source src="videos/video3.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
-
-            </div>
-
+      <!-- NAILS GALLERY -->
+      <div id="cat-nails" class="gallery-grid">
+        <div class="gallery-item">
+          <img src="images/nails-1.jpg" alt="Gel overlay nail set" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="gallery-placeholder" style="display:none;"><div class="ph-icon">*</div><span>Nails Photo 1</span><small style="color:var(--grey);font-size:0.75rem;">Add your image</small></div>
+          <div class="overlay"><span>Gel Overlay</span></div>
         </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer>
-        <div class="footer-logo">Claws by <span>Lesh</span></div>
-        <p>Tsholofelo West Flats &nbsp;|&nbsp; Gaborone</p>
-        <nav class="footer-links">
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="services.html">Services</a>
-            <a href="gallery.html">Gallery</a>
-            <a href="booking.html">Booking</a>
-            <a href="contact.html">Contact</a>
-            <a href="feedback.html">Feedback</a>
-        </nav>
-        <div class="footer-bottom">
-            <p>&copy; 2025 Claws by Lesh. All rights reserved.</p>
+        <div class="gallery-item">
+          <img src="images/nails-2.jpg" alt="Gel tips nail set" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="gallery-placeholder" style="display:none;"><div class="ph-icon">*</div><span>Nails Photo 2</span><small style="color:var(--grey);font-size:0.75rem;">Add your image</small></div>
+          <div class="overlay"><span>Gel Tips</span></div>
         </div>
-    </footer>
+        <div class="gallery-item">
+          <img src="images/nails-3.jpg" alt="Marble effect nails" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="gallery-placeholder" style="display:none;"><div class="ph-icon">*</div><span>Nails Photo 3</span><small style="color:var(--grey);font-size:0.75rem;">Add your image</small></div>
+          <div class="overlay"><span>Marble Effect</span></div>
+        </div>
+        <div class="gallery-item">
+          <img src="images/nails-4.jpg" alt="Bow nail art" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="gallery-placeholder" style="display:none;"><div class="ph-icon">*</div><span>Nails Photo 4</span><small style="color:var(--grey);font-size:0.75rem;">Add your image</small></div>
+          <div class="overlay"><span>Bow Nail Art</span></div>
+        </div>
+        <div class="gallery-item">
+          <img src="images/nails-5.jpg" alt="Chrome nails" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="gallery-placeholder" style="display:none;"><div class="ph-icon">*</div><span>Nails Photo 5</span><small style="color:var(--grey);font-size:0.75rem;">Add your image</small></div>
+          <div class="overlay"><span>Chrome Design</span></div>
+        </div>
+        <div class="gallery-item">
+          <img src="images/nails-6.jpg" alt="Hibiscus nail art" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="gallery-placeholder" style="display:none;"><div class="ph-icon">*</div><span>Nails Photo 6</span><small style="color:var(--grey);font-size:0.75rem;">Add your image</small></div>
+          <div class="overlay"><span>Hibiscus Art</span></div>
+        </div>
+        <div class="gallery-item">
+          <img src="images/nails-7.jpg" alt="Gel on toes" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="gallery-placeholder" style="display:none;"><div class="ph-icon">*</div><span>Nails Photo 7</span><small style="color:var(--grey);font-size:0.75rem;">Add your image</small></div>
+          <div class="overlay"><span>Gel on Toes</span></div>
+        </div>
+        <div class="gallery-item">
+          <img src="images/nails-8.jpg" alt="Nail set" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="gallery-placeholder" style="display:none;"><div class="ph-icon">*</div><span>Nails Photo 8</span><small style="color:var(--grey);font-size:0.75rem;">Add your image</small></div>
+          <div class="overlay"><span>Nail Set</span></div>
+        </div>
+      </div>
+
+      <!-- MAKEUP GALLERY -->
+      <div id="cat-makeup" class="gallery-grid" style="display:none;">
+        <div class="gallery-item">
+          <img src="images/makeup-1.jpg" alt="Full glam makeup" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="gallery-placeholder" style="display:none;"><div class="ph-icon">*</div><span>Makeup Photo 1</span><small style="color:var(--grey);font-size:0.75rem;">Add your image</small></div>
+          <div class="overlay"><span>Full Glam</span></div>
+        </div>
+        <div class="gallery-item">
+          <img src="images/makeup-2.jpg" alt="Natural makeup look" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="gallery-placeholder" style="display:none;"><div class="ph-icon">*</div><span>Makeup Photo 2</span><small style="color:var(--grey);font-size:0.75rem;">Add your image</small></div>
+          <div class="overlay"><span>Natural Look</span></div>
+        </div>
+        <div class="gallery-item">
+          <img src="images/makeup-3.jpg" alt="Event makeup" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="gallery-placeholder" style="display:none;"><div class="ph-icon">*</div><span>Makeup Photo 3</span><small style="color:var(--grey);font-size:0.75rem;">Add your image</small></div>
+          <div class="overlay"><span>Event Glam</span></div>
+        </div>
+        <div class="gallery-item">
+          <img src="images/makeup-4.jpg" alt="Bridal makeup" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="gallery-placeholder" style="display:none;"><div class="ph-icon">*</div><span>Makeup Photo 4</span><small style="color:var(--grey);font-size:0.75rem;">Add your image</small></div>
+          <div class="overlay"><span>Bridal Glam</span></div>
+        </div>
+        <div class="gallery-item">
+          <img src="images/makeup-5.jpg" alt="Soft glam" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="gallery-placeholder" style="display:none;"><div class="ph-icon">*</div><span>Makeup Photo 5</span><small style="color:var(--grey);font-size:0.75rem;">Add your image</small></div>
+          <div class="overlay"><span>Soft Glam</span></div>
+        </div>
+        <div class="gallery-item">
+          <img src="images/makeup-6.jpg" alt="Dramatic eye look" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="gallery-placeholder" style="display:none;"><div class="ph-icon">*</div><span>Makeup Photo 6</span><small style="color:var(--grey);font-size:0.75rem;">Add your image</small></div>
+          <div class="overlay"><span>Bold Eyes</span></div>
+        </div>
+        <div class="gallery-item">
+          <img src="images/makeup-7.jpg" alt="Makeup look" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="gallery-placeholder" style="display:none;"><div class="ph-icon">*</div><span>Makeup Photo 7</span><small style="color:var(--grey);font-size:0.75rem;">Add your image</small></div>
+          <div class="overlay"><span>Glam Look</span></div>
+        </div>
+        <div class="gallery-item">
+          <img src="images/makeup-8.jpg" alt="Contoured look" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="gallery-placeholder" style="display:none;"><div class="ph-icon">*</div><span>Makeup Photo 8</span><small style="color:var(--grey);font-size:0.75rem;">Add your image</small></div>
+          <div class="overlay"><span>Contour Beat</span></div>
+        </div>
+      </div>
+
+      <!-- FRONTALS GALLERY -->
+      <div id="cat-frontals" class="gallery-grid" style="display:none;">
+        <div class="gallery-item">
+          <img src="images/frontal-1.jpg" alt="Frontal install" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="gallery-placeholder" style="display:none;"><div class="ph-icon">*</div><span>Frontal Photo 1</span><small style="color:var(--grey);font-size:0.75rem;">Add your image</small></div>
+          <div class="overlay"><span>Frontal Install</span></div>
+        </div>
+        <div class="gallery-item">
+          <img src="images/frontal-2.jpg" alt="Closure install" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="gallery-placeholder" style="display:none;"><div class="ph-icon">*</div><span>Frontal Photo 2</span><small style="color:var(--grey);font-size:0.75rem;">Add your image</small></div>
+          <div class="overlay"><span>Closure Sew-In</span></div>
+        </div>
+        <div class="gallery-item">
+          <img src="images/frontal-3.jpg" alt="Laid frontal" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="gallery-placeholder" style="display:none;"><div class="ph-icon">*</div><span>Frontal Photo 3</span><small style="color:var(--grey);font-size:0.75rem;">Add your image</small></div>
+          <div class="overlay"><span>Laid to Perfection</span></div>
+        </div>
+        <div class="gallery-item">
+          <img src="images/frontal-4.jpg" alt="Curly frontal" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="gallery-placeholder" style="display:none;"><div class="ph-icon">*</div><span>Frontal Photo 4</span><small style="color:var(--grey);font-size:0.75rem;">Add your image</small></div>
+          <div class="overlay"><span>Curly Frontal</span></div>
+        </div>
+        <div class="gallery-item">
+          <img src="images/frontal-5.jpg" alt="Straight frontal" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="gallery-placeholder" style="display:none;"><div class="ph-icon">*</div><span>Frontal Photo 5</span><small style="color:var(--grey);font-size:0.75rem;">Add your image</small></div>
+          <div class="overlay"><span>Straight Style</span></div>
+        </div>
+        <div class="gallery-item">
+          <img src="images/frontal-6.jpg" alt="Blown out frontal" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="gallery-placeholder" style="display:none;"><div class="ph-icon">*</div><span>Frontal Photo 6</span><small style="color:var(--grey);font-size:0.75rem;">Add your image</small></div>
+          <div class="overlay"><span>Blown Out</span></div>
+        </div>
+        <div class="gallery-item">
+          <img src="images/frontal-7.jpg" alt="Frontal style" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="gallery-placeholder" style="display:none;"><div class="ph-icon">*</div><span>Frontal Photo 7</span><small style="color:var(--grey);font-size:0.75rem;">Add your image</small></div>
+          <div class="overlay"><span>Frontal Style</span></div>
+        </div>
+        <div class="gallery-item">
+          <img src="images/frontal-8.jpg" alt="Frontal install" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="gallery-placeholder" style="display:none;"><div class="ph-icon">*</div><span>Frontal Photo 8</span><small style="color:var(--grey);font-size:0.75rem;">Add your image</small></div>
+          <div class="overlay"><span>Full Install</span></div>
+        </div>
+      </div>
+
+      <!-- LASHES GALLERY -->
+      <div id="cat-lashes" class="gallery-grid" style="display:none;">
+        <div class="gallery-item">
+          <img src="images/lashes-1.jpg" alt="Classic lash set" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="gallery-placeholder" style="display:none;"><div class="ph-icon">*</div><span>Lashes Photo 1</span><small style="color:var(--grey);font-size:0.75rem;">Add your image</small></div>
+          <div class="overlay"><span>Classic Set</span></div>
+        </div>
+        <div class="gallery-item">
+          <img src="images/lashes-2.jpg" alt="Volume lashes" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="gallery-placeholder" style="display:none;"><div class="ph-icon">*</div><span>Lashes Photo 2</span><small style="color:var(--grey);font-size:0.75rem;">Add your image</small></div>
+          <div class="overlay"><span>Volume Set</span></div>
+        </div>
+        <div class="gallery-item">
+          <img src="images/lashes-3.jpg" alt="Hybrid lashes" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="gallery-placeholder" style="display:none;"><div class="ph-icon">*</div><span>Lashes Photo 3</span><small style="color:var(--grey);font-size:0.75rem;">Add your image</small></div>
+          <div class="overlay"><span>Hybrid Lashes</span></div>
+        </div>
+        <div class="gallery-item">
+          <img src="images/lashes-4.jpg" alt="Wispy lashes" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="gallery-placeholder" style="display:none;"><div class="ph-icon">*</div><span>Lashes Photo 4</span><small style="color:var(--grey);font-size:0.75rem;">Add your image</small></div>
+          <div class="overlay"><span>Wispy Style</span></div>
+        </div>
+        <div class="gallery-item">
+          <img src="images/lashes-5.jpg" alt="Natural lashes" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="gallery-placeholder" style="display:none;"><div class="ph-icon">*</div><span>Lashes Photo 5</span><small style="color:var(--grey);font-size:0.75rem;">Add your image</small></div>
+          <div class="overlay"><span>Natural Set</span></div>
+        </div>
+        <div class="gallery-item">
+          <img src="images/lashes-6.jpg" alt="Mega volume lashes" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="gallery-placeholder" style="display:none;"><div class="ph-icon">*</div><span>Lashes Photo 6</span><small style="color:var(--grey);font-size:0.75rem;">Add your image</small></div>
+          <div class="overlay"><span>Mega Volume</span></div>
+        </div>
+        <div class="gallery-item">
+          <img src="images/lashes-7.jpg" alt="Lash set" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="gallery-placeholder" style="display:none;"><div class="ph-icon">*</div><span>Lashes Photo 7</span><small style="color:var(--grey);font-size:0.75rem;">Add your image</small></div>
+          <div class="overlay"><span>Lash Set</span></div>
+        </div>
+        <div class="gallery-item">
+          <img src="images/lashes-8.jpg" alt="Full lash set" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="gallery-placeholder" style="display:none;"><div class="ph-icon">*</div><span>Lashes Photo 8</span><small style="color:var(--grey);font-size:0.75rem;">Add your image</small></div>
+          <div class="overlay"><span>Full Lash Look</span></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section" style="background: var(--rose-pale); text-align: center; padding: 50px 0;">
+    <div class="container">
+      <h2 class="section-title">Love What You See?</h2>
+      <p style="margin-bottom:2rem;">Book your appointment and let us create your next look.</p>
+      <a href="book.html" class="btn btn-primary">Book an Appointment</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">Glam <span>Studio</span></a>
+          <p>Gaborone's go-to beauty studio for nails, makeup, frontals and lash installations.</p>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="book.html">Book Appointment</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul class="footer-links">
+            <li><a href="contacts.html">WhatsApp: +267 XXXXXXX</a></li>
+            <li><a href="contacts.html">Facebook: Glam Studio</a></li>
+            <li><a href="contacts.html">TikTok: @glamstudio</a></li>
+            <li><a href="feedback.html">Leave Feedback</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Glam Studio, Gaborone. Designed with <span>love</span> for beauty.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function showCategory(cat, btn) {
+      // Hide all grids
+      document.querySelectorAll('[id^="cat-"]').forEach(el => el.style.display = 'none');
+      // Remove active from all tabs
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      // Show target
+      document.getElementById('cat-' + cat).style.display = 'grid';
+      btn.classList.add('active');
+    }
+  </script>
 
 </body>
 </html>
